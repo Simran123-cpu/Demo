@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!--google poppins font family-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body{
+        
+        background: radial-gradient(755px at 10.1% 95.3%, rgb(242, 188, 141) 0%, rgb(242, 159, 141) 100.2%);
+    }
+    ul{
+        padding: 0px;
+        margin:0px;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: rgba(172,100,100);
+        
+        
+    }
+    li{
+        float: left;
+        color: white;
+        padding:14px 16px;
+        text-align: center;
+        font-weight: 200;
+        float: right;
+        
+    }
+    
+    li a{
+        display: block;
+        color: rgb(255, 252, 252);
+        padding: 14px 16px;
+        text-align: center;
+        text-decoration: none;
+        border-right: 1px solid white;
+        
+        
+        
+    }
+    .name{
+        float: left;
+        font-size: 40px;
+        font-family: 'Brush Script MT', cursive;
+    }
+    
+    li a:hover{
+        background-color: rgb(172, 100, 100);
+    }
+    li a:active{
+        background-color: rgb(184, 140, 140);
+    }
+    .main{
+        display: flex;
+        justify-content: space-between;
+    }
+    .about-div{
+        display: inline;
+        text-align: left;
+        width: 50%;
+        padding: 20px;
+        margin-top: 20px;
+        margin-left: 20px;
+        background-color:rgba(172, 100, 100, 0.55);
+        color: aliceblue;
+    }
+    .about-content{
+        max-height: 300px;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+    .about-content.expanded{
+        max-height: none;
+    }
+    .read-more-btn{
+        cursor: pointer;
+        color:blue;
+    }
+    .picture{
+        padding-top: 30px;
+        padding-right: 120px;
+        
+        width: 500px;
+    }
+        
+    
+    .pic{
+        width: 70%;
+        margin-top: 0px;
+        justify-content: center;
+        float: right;
+    }
+    html{
+        scroll-behavior: smooth;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(70, 70, 224, 0.69);
+    }
+    .academics{
+        display: flex;
+        width: auto;
+        justify-content: space-between;
+        margin-top: 50px;
+        
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(172, 100, 100, 0.55);
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+        color: aliceblue;
+    }
+    .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+</style>
+
+    <!--<div class="name">Simran Manwani</div>-->
+    <header>
+    <ul>
+        <li class="name">Simran Manwani</li>
+        <li><a href="#Contact">Contact</a></li>
+        <li><a href="#Projects " >Projects</a> </li>
+        <li><a href="#about" >About-Me</a></li>
+        <li><a href="#Home">Home</a> </li>
+    </ul>
+    </header>
+    <div id="about" class="main">
+        <div class="about-div">
+            <h2>About-Me</h2>
+            <div class="about-content">
+                <p>I am Simran Manwani, currently a Computer Science student pursuing my BCA and currently in my third year of the course. I am deeply passionate about computer science, finding immense joy in coding, and consider myself a dedicated learner. My primary expertise lies in Python, which serves as my core technology. In addition to Python, I have explored embedded technologies such as Pandas, NumPy, and Matplotlib, acknowledging that while I am not perfect, I possess a solid foundational knowledge.</p>
+                <p>My understanding extends to fundamental Object-Oriented Programming (OOP) principles and Data Structures and Algorithms (DSA). Initially acquainted with C/C++ and Java at an intermediate level, I have also acquired knowledge in SQL. Further, I possess a basic understanding of HTML and CSS.</p>
+                <p>For my first minor project, I utilized Python, incorporating Tkinter for the graphical user interface and MySQL for the database. In my spare time, I contribute tech-related content on YouTube, reflecting my commitment to sharing knowledge with the community.</p>
+                <p>Beyond academics and technology, I cultivate various hobbies, including chess and badminton, recognizing the holistic benefits they offer for both mind and body. As a quick learner, I possess the ability to swiftly grasp and apply new concepts, showcasing my adaptability and commitment to continuous growth.</p>
+            </div>
+            <div class="read-more-btn" onclick="toggleReadMore()">Read More</div>
+        </div>
+        <div class="picture">
+            <img  class="pic" src=profile-pic.png alt="">
+        </div>
+        
+    </div>
+    <footer id="Contact" class="footer">
+        <h2>Contact Me</h2>
+        <p>Email: simranmanwani780@gmail.com</p>
+        
+        <p>Connect with me on social media:</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/simran-manwani-b35b47221/" target="_blank" class="fa fa-linkedin"></a>
+            <a href="https://twitter.com/C_Codingly" target="_blank" class="fa fa-twitter"></a>
+            <a href="http://www.youtube.com/@SimranManwani." target="_blank" class="fa fa-youtube"></a>
+            <a href="#" target="_blank" class="fa fa-instagram"></a>
+        </div>
+        <!-- Add your social media icons and links here -->
+        <p>&copy; 2024 Simran Manwani All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleReadMore() {
+            var content = document.querySelector('.about-content');
+            content.classList.toggle('expanded');
+        }
+    </script>
+    
+
+</body>
+</html>
